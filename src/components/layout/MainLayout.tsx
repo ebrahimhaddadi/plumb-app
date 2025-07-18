@@ -1,17 +1,20 @@
-import Header from "../common/Header.tsx";
-import Footer from "../common/Footer.tsx";
+import Header from "../common/Header/Header.tsx";
+import Footer from "../common/Footer/Footer.tsx";
 import { Outlet } from "react-router-dom";
+// import styles from "./MainLayout.module.css"
 
 export default function MainLayout() {
     return (
-        <div className="min-h-screen flex flex-col bg-gray-100">
+        <div>
+
             <Header />
 
-            <main className="flex-grow container ">
+            <main >
                 <Outlet />
             </main>
 
             <Footer />
+
         </div>
     )
 }

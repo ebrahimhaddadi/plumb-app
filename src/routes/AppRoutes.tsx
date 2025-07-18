@@ -1,25 +1,43 @@
 
-import { Routes, Route } from "react-router-dom"
-import Home from "../pages/Home"
-import ContactUs from "../pages/ContactUs.tsx"
+import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from "../components/layout/MainLayout.tsx";
+import Home from '../pages/Home/Home.tsx';
+import RegisterProperty from '../pages/RegisterProperty/RegisterProperty.tsx';
+import PropertyInspection from '../pages/PropertyInspection/PropertyInspection.tsx';
 
-const routeList = [
-    { path: "/", element: <Home />, name: "خانه" },
-    { path: "/contact", element: <ContactUs />, name: "تماس با ما" },
-    // بعداً راحت اضافه کن → { path: "/about", element: <About />, name: "درباره ما" }
-]
+import ContactUs from '../pages/ContactUs/ContactUs.tsx';
 
-export default function AppRoutes() {
-    return (
-        <Routes>
-            <Route element={<MainLayout/>}>
+// تعریف روت‌ها
+const router = createBrowserRouter([
+    {
+        element: <MainLayout />,
+        children: [
+            {
+                path: '/',
+                element: <Home />,
 
+            },
+            {
+                path: '/register-property',
+                element: <RegisterProperty />,
 
-            {routeList.map((route, index) => (
-                <Route key={index} path={route.path} element={route.element} />
-            ))}
-            </Route>
-        </Routes>
-    )
-}
+            },
+            {
+                path: '/property-inspection',
+                element: <PropertyInspection />,
+
+            },
+            {
+                path: '/contact',
+                element: <ContactUs />,
+
+            },
+            {
+                path: '*',
+                element: <h1>صفحه پیدا نشد!</h1>,
+            },
+        ],
+    },
+]);
+
+export default router;

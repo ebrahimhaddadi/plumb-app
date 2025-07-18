@@ -1,0 +1,82 @@
+.wrapper {
+    position: fixed;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100vw;
+    margin-bottom: 5px;
+
+}
+
+.nav {
+    height: 93px;
+    background-image: url('../../../assets/icons/Union.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+
+.item {
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    z-index: 1;
+    width: 20%;
+    /*background-color: red;*/
+   margin-top: 15px;
+}
+
+.icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.active {
+    color: #ffcccb;
+}
+
+.centerWrapper {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+
+}
+
+.addBtn {
+    background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.addBtn img {
+    width: 24px;
+    height: 24px;
+}
+
+.centerLabel {
+    margin-top: 4px;
+    color: white;
+    font-size: 12px;
+}

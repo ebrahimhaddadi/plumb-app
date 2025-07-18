@@ -1,0 +1,20 @@
+/* کل بک‌گراند قرمز و محتوای وسط */
+.fullWrapper {
+    background-color: red;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #f8faff;
+}
+
+/* محتوا با عرض محدود (وسط چین) */
+.centerContent {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    background-color: transparent; /* اگه خواستی جدا بکگراند بدی */
+    display: flex;
+    flex-direction: column;
+    padding: 1rem; /* حاشیه داخلی */
+}

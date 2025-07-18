@@ -1,0 +1,151 @@
+.container {
+    padding: 1rem;
+    font-family: Vazirmatn, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.houseImage {
+    width: 95vw;
+    height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.addBtn {
+    background: linear-gradient(to right, #f27059, #f28f3b);
+    border: none;
+    color: white;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 87vw;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 15px;
+    padding-left: 18px;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+
+}
+
+.tabList {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    width: 93vw;
+}
+
+.tab {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 30px;
+    font-size: 13px;
+    color: #1a1a1a;
+    min-width: 65px;
+}
+
+.active {
+    background: linear-gradient(to right, #f27059, #f28f3b);
+    color: white;
+    border: none;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+
+}
+
+.inputs input {
+    /*padding: 0.75rem;*/
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background-color: #fff;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    color: #1a1a1a;
+    text-align: right;
+    padding-right: 20px;
+    font-family: Vazirmatn, sans-serif;
+}
+
+.submitBtn {
+    background: linear-gradient(to right, #a3fcb1, #00c878);
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+    margin-bottom: 100px;
+    margin-left: 15px;
+    width: 89vw;
+    height: 59px;
+}
+.submitBtn:hover {
+    outline: none;
+}
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+}
+.topContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+    height: 55px;
+}
+.ballContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.imageContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.customerText{
+    color: #000;
+    margin-right: 15px;
+}
