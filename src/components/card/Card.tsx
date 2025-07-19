@@ -42,7 +42,7 @@ export default function Card(props: PropertyCardProps) {
             </div>
 
             <div className={styles.titleRow}>
-                <p className={styles.price}>از {price}</p>
+{/*                 <p className={styles.price}>از {price}</p> */}
                 <p className={styles.title}>{title}</p>
             </div>
 
