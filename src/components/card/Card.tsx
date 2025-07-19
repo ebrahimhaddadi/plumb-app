@@ -51,11 +51,11 @@ export default function Card(props: PropertyCardProps) {
                 <span>{address}</span>
             </div>
 
-            <div className={styles.features}>
+{/*             <div className={styles.features}>
                 <span> {rooms} اتاق خواب</span>
                 <span> {baths} سرویس</span>
                 <span>{area} مترمربع</span>
-            </div>
+            </div> */}
         </div>
     );
 }
