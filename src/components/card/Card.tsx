@@ -16,7 +16,7 @@ interface PropertyCardProps {
 }
 
 export default function Card(props: PropertyCardProps) {
-    const { owner, city, avatar, image, title } = props;
+    const { owner, city, avatar, image, title, address } = props;
 
     return (
         <div className={styles.card}>
