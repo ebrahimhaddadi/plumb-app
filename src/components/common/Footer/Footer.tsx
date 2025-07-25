@@ -32,7 +32,7 @@ const Footer = () => {
                     <img src={MessageSvg} alt="گفتگو" />
                     <span>گفتگو</span>
                 </div>
-                <div onClick={()=>navigate("/")} className={`${styles.item} ${styles.active}`}>
+                <div onClick={()=>navigate("/home")} className={`${styles.item} ${styles.active}`}>
 
                     <img src={HomeSvg} alt="خانه" />
                     <span>خانه</span>

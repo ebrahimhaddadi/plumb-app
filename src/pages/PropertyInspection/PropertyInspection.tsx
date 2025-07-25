@@ -16,7 +16,7 @@ export default function PropertyInspection() {
                         <img src={BookmarkIcon} alt={"bookmark"}/>
                         <img src={ShareIcon} alt={"share"}/>
                     </div>
-                    <div onClick={()=>navigate("/")} className={styles.homeContainer}>
+                    <div onClick={()=>navigate("/home")} className={styles.homeContainer}>
                         <div>خانه</div>
                         <img src={ArrowRightIcon} alt={"arrow right"}/>
 
