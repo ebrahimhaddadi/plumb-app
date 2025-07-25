@@ -1,7 +1,6 @@
-import  styles from "./Card.module.css";
+import styles from "./Card.module.css";
 import ArchiveSvg from "../../assets/icons/archive.svg";
 import GallerySvg from "../../assets/icons/gallery.svg";
-
 
 interface PropertyCardProps {
     owner: string;
@@ -17,11 +16,7 @@ interface PropertyCardProps {
 }
 
 export default function Card(props: PropertyCardProps) {
-    const {
-        owner, city, avatar, image,
-        title, price, address,
-        rooms, baths, area
-    } = props;
+    const { owner, city, avatar, image, title, address } = props;
 
     return (
         <div className={styles.card}>
@@ -37,12 +32,12 @@ export default function Card(props: PropertyCardProps) {
                 <img src={image} alt={title} className={styles.image} />
                 <span className={styles.imageCount}>+8 تصویر دیگر</span>
                 <button className={styles.bookmark}>
-                    <img src={ArchiveSvg}/>
+                    <img src={ArchiveSvg} />
                 </button>
             </div>
 
             <div className={styles.titleRow}>
-                <p className={styles.price}>از {price}</p>
+                {/*                 <p className={styles.price}>از {price}</p> */}
                 <p className={styles.title}>{title}</p>
             </div>
 
@@ -51,11 +46,11 @@ export default function Card(props: PropertyCardProps) {
                 <span>{address}</span>
             </div>
 
-            <div className={styles.features}>
+            {/*             <div className={styles.features}>
                 <span> {rooms} اتاق خواب</span>
                 <span> {baths} سرویس</span>
                 <span>{area} مترمربع</span>
-            </div>
+            </div> */}
         </div>
     );
 }
