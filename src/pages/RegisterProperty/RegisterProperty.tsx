@@ -3,10 +3,15 @@ import sampleHouse from '../../assets/img/2.jpg'; // عکس خانه
 
 import BallSvg from "../../assets/icons/notification-bing.svg";
 import ProfileImage from "../../assets/img/profile.jpg";
-import { useNavigate} from "react-router-dom"; // عکس پروفایل
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function RegisterProperty() {
         const navigate=useNavigate();
+    const location = useLocation();
+    const status = location.state?.status || 'listing';
+    const isInspection = status === 'inspection';
+
+    console.log("status", status, "isInspection", isInspection);
     return (
         <div className={styles.container}>
             <div className={styles.topContainer} >
@@ -45,9 +50,13 @@ export default function RegisterProperty() {
                 <input type="text" placeholder="منطقه" />
             </div>
 
-                    <button onClick={()=>navigate("/property-inspection")} className={styles.submitBtn}>
-                            درخواست بازرسی
-                    </button>
+            <button
+                onClick={() => navigate(isInspection ? "/build-check-list" : "/home")}
+                className={styles.submitBtn}
+            >
+                {isInspection ? "ارسال درخواست بازرسی" : "ثبت ملک"}
+            </button>
+
 
         </div>
     );

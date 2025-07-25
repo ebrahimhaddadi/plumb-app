@@ -1,11 +1,14 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { createHashRouter as createRouter, Navigate } from 'react-router-dom';
 import MainLayout from "../components/layout/MainLayout.tsx";
 import Home from '../pages/Home/Home.tsx';
 import RegisterProperty from '../pages/RegisterProperty/RegisterProperty.tsx';
 import PropertyInspection from '../pages/PropertyInspection/PropertyInspection.tsx';
 import ContactUs from '../pages/ContactUs/ContactUs.tsx';
+import InProgress from "../pages/InProgress/InProgress.tsx";
+import BuildCheckList from "../pages/BuildCheckList/BuildCheckList.tsx";
+import InProgressCheckList from "../pages/InProgressCheckList/InProgressCheckList.tsx";
 
-const router = createBrowserRouter([
+const router = createRouter([
   {
     element: <MainLayout />,
     children: [
@@ -24,6 +27,18 @@ const router = createBrowserRouter([
       {
         path: '/property-inspection',
         element: <PropertyInspection />
+      },
+      {
+        path:'/in-progress',
+        element:<InProgress/>
+      },
+      {
+        path:"/build-check-list",
+        element:<BuildCheckList/>
+      },
+      {
+        path:"/in-progress-check-list",
+        element:<InProgressCheckList/>
       },
       {
         path: '/contact',

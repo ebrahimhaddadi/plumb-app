@@ -2,11 +2,15 @@ import styles from './PropertyInspection.module.css';
 import BookmarkIcon from '../../assets/icons/archive-tick.svg';
 import ArrowRightIcon from '../../assets/icons/arrow-right.svg';
 import ShareIcon from '../../assets/icons/share.svg';
-import HomeImage from '../../assets/img/2.jpg';
-import {useNavigate} from "react-router-dom";
+import {useNavigate,useLocation} from "react-router-dom";
 
 export default function PropertyInspection() {
+    const location = useLocation();
+    const property = location.state?.property;
+
+
     const navigate=useNavigate();
+    if (!property) return <p>اطلاعاتی برای نمایش وجود ندارد</p>;
     return (
         <div className={styles.container}>
             <div className={styles.card}>
@@ -22,20 +26,23 @@ export default function PropertyInspection() {
 
                     </div>
                 </div>
-                <img src={HomeImage} alt="home" className={styles.image} />
+                <img src={property.image} alt={property.title} style={{ width: "100%" }} className={styles.image} />
                 <div className={styles.dots}>
                     <span className={styles.activeDot}></span>
                     <span></span>
                     <span></span>
                 </div>
 
-                <h3 className={styles.title}>آپارتمان ۷۰ متری مهرشهر، نوساز</h3>
+                <h3 className={styles.title}>{property.title}</h3>
                 <p className={styles.address}>
-                    تهران، زعفرانیه، خیابان مقدس اردبیلی، کوچه نسترن، پلاک ۱۲، خانه مسکونی، طبقه همکف
+                    {property.address}
+                </p>
+                <p className={styles.address}>
+                    {property.owner}
                 </p>
             </div>
 
-            <button className={styles.inspectBtn}>درخواست بازرسی</button>
+            <button className={styles.inspectBtn}>ارسال درخواست بازرسی</button>
         </div>
     );
 }

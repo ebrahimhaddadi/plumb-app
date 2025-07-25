@@ -1,0 +1,207 @@
+.container {
+
+    font-family: Vazirmatn, sans-serif;
+    background-color: #f8faff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    /*overflow-y: hidden;*/
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+.icon {
+    width: 18px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    /*gap: 0.5rem;*/
+    width: 90vw;
+}
+.topContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+
+}
+.homeContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    color: #1a1a1a;
+    cursor: pointer;
+
+}
+.image {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.dots span {
+    width: 6px;
+    height: 6px;
+    background: #ccc;
+    border-radius: 50%;
+}
+
+.activeDot {
+    background: orange;
+    width: 8px;
+    height: 8px;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.address {
+    font-size: 12px;
+    color: #666;
+}
+
+.inspectBtn {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to right, #8cf5b8, #1dd191);
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 200px;
+    cursor: pointer;
+}
+.check_lists{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 12px;
+
+
+}
+.text {
+    color: #1a1a1a;
+    margin-right: 10px;
+}
+.check_list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 34px;
+}
+.cost {
+    background-color: transparent;
+    border: 1px solid #f85a2a;
+    color: #f85a2a;
+    font-size: 14px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cost:hover {
+    background-color: #f85a2a11;
+    border: 1px solid #f85a2a;
+    outline: none;
+}
+.cost:focus{
+    outline: none;
+    background-color: #f85a2a11;
+}
+.price{
+    border: 1px solid #f85a2a;
+    color: #1a1a1a;
+    min-width: 150px;
+    margin-right: 16px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 15px;
+}
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modalContent {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 75%;
+    max-width: 320px;
+    color: #1a1a1a;
+}
+
+.modalButtons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.modalBtn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(to right, #1dd191, #8cf5b8);
+    color: white;
+}
+
+.modalClose {
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    color: #f85a2a;
+    cursor: pointer;
+}

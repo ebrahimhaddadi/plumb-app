@@ -9,12 +9,15 @@ import Building3Svg from "../../assets/icons/building-3.svg";
 import Building4Svg from "../../assets/icons/building-4.svg";
 import BuildingsSvg from "../../assets/icons/buildings.svg";
 import Card from "../../components/card/Card.tsx";
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+
 
 
 
 export default function Home() {
     const [active, setActive] = useState('خانه ویلایی');
+    const [showModal, setShowModal] = useState(false);
+    const navigate = useNavigate();
     const properties = [
         {
             id: 1,
@@ -106,6 +109,11 @@ export default function Home() {
                      ))}
 
              </div>
+            <div className={styles.buttonsContainer}>
+                <button className={styles.requestBtn}
+                        onClick={() => setShowModal(true)}
+                >درخواست بازرسی</button>
+            </div>
             <div className={styles.containerNew} >
                 <button className={styles.showAll}>
                     دیدن همه
@@ -117,19 +125,35 @@ export default function Home() {
                 <div className={styles.cardsWrapper}>
                     <div className={styles.cards}>
                         {properties.map(property => (
-                            <Card key={property.id} {...property} />
+                            <div style={{cursor:"pointer"}} onClick={()=> navigate("/property-inspection", { state: { property } })} >
+                                <Card key={property.id} {...property} />
+                            </div>
                         ))}
                     </div>
                 </div>
             </div>
-            <div className={styles.buttonsContainer}>
-                <button className={styles.requestBtn}>درخواست بازرسی</button>
-                <button className={styles.registerBtn}>
-                    <Link to="/register-property">
-                        ثبت ملک
-                    </Link>
-                    </button>
-            </div>
+            {showModal && (
+                <div className={styles.modalOverlay}>
+                    <div className={styles.modalContent}>
+                        <h3>ملک شما در چه مرحله‌ای است؟</h3>
+                        <div className={styles.modalButtons}>
+                            <button
+                                className={styles.modalBtn}
+                                onClick={() => navigate("/in-progress", { state: { status: "in-progress" } })}
+                            >
+                                در حال ساخت
+                            </button>
+                            <button
+                                className={styles.modalBtn}
+                                onClick={() => navigate("/register-property", { state: { status: "inspection" } })}
+                            >
+                                ساخته شده
+                            </button>
+                        </div>
+                        <button className={styles.modalClose} onClick={() => setShowModal(false)}>بستن</button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

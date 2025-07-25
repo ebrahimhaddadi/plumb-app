@@ -5,7 +5,7 @@ import ProfileSvg from "../../../assets/icons/profile.svg";
 import HomeSvg from "../../../assets/icons/home.svg";
 import ArchiveSvg from "../../../assets/icons/archive.svg";
 import MessageSvg from "../../../assets/icons/messages-2.svg";
-import {useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 const Footer = () => {
     const navigate=useNavigate()
@@ -22,10 +22,10 @@ const Footer = () => {
                 </div>
 
                 <div className={styles.centerWrapper}>
-                    <button className={styles.addBtn}>
-                        <img src={PlusSvg} alt="ثبت آگهی" />
+                    <button onClick={()=>navigate("/register-property" ,{ state: { status: "register" }})} className={styles.addBtn}>
+                            <img src={PlusSvg} alt="ثبت ملک" />
                     </button>
-                    <span className={styles.centerLabel}>ثبت آگهی</span>
+                    <span className={styles.centerLabel}>ثبت ملک</span>
                 </div>
 
                 <div style={{marginLeft:25}} className={styles.item}>
@@ -33,7 +33,6 @@ const Footer = () => {
                     <span>گفتگو</span>
                 </div>
                 <div onClick={()=>navigate("/home")} className={`${styles.item} ${styles.active}`}>
-
                     <img src={HomeSvg} alt="خانه" />
                     <span>خانه</span>
                 </div>
