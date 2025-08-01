@@ -1,0 +1,46 @@
+/* DownloadBadges.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-right: 32px;
+  padding: 20px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+ /* Adjust height as needed */
+}
+.badge img{
+    width: 220px;
+}
+
+.googlePlay, .appStore {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.playIcon, .appleIcon {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.smallText {
+  font-size: 12px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.largeText {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+}

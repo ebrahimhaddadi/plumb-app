@@ -1,18 +1,22 @@
 /* استایل‌های قبلی footer را نگه دارید، این‌ها را اضافه کنید */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .drawer {
   position: fixed;
   top: 0;
-  left: -500px; /* عرض drawer را تنظیم کنید */
+  left: -12500px; /* از سمت چپ، عرض کامل */
   width: 100%;
   height: 100%;
   background-color: white;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  transition: left 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* سایه از سمت راست */
+  transition: left 0.3s ease; /* انیمیشن کشویی از چپ */
   z-index: 1000;
   padding: 20px;
   display: flex;
   flex-direction: column; /* برای لیست عمودی */
+  direction: ltr; /* اگر می‌خواهید LTR باشد، یا rtl نگه دارید */
 }
 
 .drawer.open {
@@ -20,13 +24,17 @@
 }
 
 .drawerOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  background-color: #61c9c3;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 35px;
+  top: 5px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 .closeBtn {
@@ -36,7 +44,7 @@
   cursor: pointer;
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 10px; /* برای LTR، × در سمت راست */
 }
 
 .menuBtn {
@@ -44,22 +52,60 @@
   background: #007bff;
   color: white;
   border: none;
-  padding: 10px;
   cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuIcon {
+  /* اگر آیکون خاصی دارید، استایل کنید */
 }
 
 /* برای عمودی کردن nav داخل drawer */
-.nav {
+.navVertical {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* چپ‌چین آیتم‌ها برای LTR */
   gap: 20px; /* فاصله بین آیتم‌ها */
+  opacity: 0; /* ابتدا hidden */
+  animation: none; /* reset */
+  margin-top: 25px;
+  margin-right: 45px;
+}
+
+.navVertical.visible {
+  opacity: 1;
+  animation: fadeIn 0.3s ease forwards; /* انیمیشن fade-in */
+  animation-delay: 200ms; /* تأخیر 200 میلی‌ثانیه */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .item, .centerWrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse; /* آیکون + متن از چپ */
   align-items: center;
   cursor: pointer;
   color: black;
+  gap: 10px; /* فاصله بین آیکون و متن */
+  width: 100%; /* برای پر کردن عرض */
+  justify-content: flex-start; /* چپ‌چین محتوا برای LTR */
+  padding: 10px;
+  margin-right: 25px;
+}
+
+
+
+.active {
+  font-weight: bold;
+  color: #007bff; /* رنگ فعال */
 }

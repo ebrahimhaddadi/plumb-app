@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
-import { FaGlobe } from "react-icons/fa"
+import { FaGlobe } from "react-icons/fa";
+import flagOfIran from "../../assets/img/Flag_of_Iran.png";
 
 const LANGS = [
     { code: "en", label: "English" },
@@ -20,13 +21,14 @@ export default function LanguageSelector() {
     }
 
     return (
-        <div className="relative inline-block text-right">
+        <div style={{marginLeft:10}} >
             <button
                 onClick={() => setOpen(!open)}
-                className="flex items-center justify-center px-3 py-2 bg-white text-gray-800 rounded-lg border shadow w-36 hover:bg-gray-100 transition-all"
+               
             >
-                <FaGlobe className="mr-2" />
-                زبان
+                {/* <FaGlobe className="mr-2" /> */}
+                <img style={{width: "20px", height: "20px"}} src={flagOfIran} />
+                
             </button>
 
             {open && (
@@ -46,4 +48,4 @@ export default function LanguageSelector() {
             )}
         </div>
     )
-}
+}   

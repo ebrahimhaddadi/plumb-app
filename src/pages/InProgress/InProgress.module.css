@@ -1,4 +1,8 @@
-.container {
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;.container {
     padding: 1rem;
     font-family: Vazirmatn, sans-serif;
     display: flex;

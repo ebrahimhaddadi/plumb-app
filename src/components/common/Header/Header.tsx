@@ -1,16 +1,30 @@
+import styles from "./Header.module.css";
+import menubSvg from "../../../assets/icons/menuH.svg";
+import BallSvg from "../../../assets/img/ball.png"
+import LanguageSelector from "../LanguageSelector";
+import { useTranslation } from "react-i18next";
 
+interface HeaderProps {
+    toggleDrawer: () => void; // prop برای toggle
+}
 
-// import styles from './Header.module.css';
-
-const Header = () => {
+const Header = ({ toggleDrawer }: HeaderProps) => {
+    const {t}=useTrans
     return (
-        <header >
-            {/*<input type="text" placeholder="جستجو..." className={styles.searchInput} />*/}
-            {/*<div className={styles.icons}>*/}
-            {/*    <span>🔔</span>*/}
-            {/*    <img src="https://example.com/profile.jpg" alt="Profile" className={styles.profileIcon} />*/}
-            {/*</div>*/}
-        </header>
+        <div className={styles.header}>
+            <button onClick={toggleDrawer} className={styles.menuBtn}>
+              <img src={menubSvg} className={styles.menuIcon} style={{ width: 35, height: 35 }} />  
+            </button>
+            <div style={{display:"flex",flexDirection:"row-reverse",alignItems:"center",justifyContent:"center",marginTop:10 }} >
+            {/* <div className={styles.ballContainer} >
+                    <img src={BallSvg} />
+             </div> */}
+                <div className={styles.logoText} >{t("shaghoul")}</div>
+              {/* <LanguageSelector/> */}
+            </div>
+          
+            
+        </div>
     );
 };
 

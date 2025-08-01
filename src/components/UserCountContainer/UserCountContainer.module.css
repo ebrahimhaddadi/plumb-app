@@ -1,0 +1,45 @@
+.outerContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.innerContainer {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1); /* بکگراند نیمه‌شفاف سفید */
+  backdrop-filter: blur(4px); /* افکت بلور (شبیه backdrop-blur-md) */
+  border-radius: 9999px; /* گرد کامل */
+  padding: 0.5rem 1rem; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* سایه */
+  width: 95%;
+  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+
+.imagesWrapper {
+  display: flex;
+  margin-left: -0.5rem; /* overlap شبیه -space-x-2 */
+}
+
+.userImage {
+  width: 2.5rem; /* w-10 */
+  height: 2.5rem; /* h-10 */
+  border-radius: 50%; /* rounded-full */
+  border: 2px solid white; /* border-2 border-white */
+  margin-left: -0.5rem; /* برای overlap */
+}
+
+.userImage:first-child {
+  margin-left: 0; /* اولین عکس بدون margin منفی */
+}
+
+.text {
+  margin-left: 0.5rem; /* ml-2 */
+  color: white; /* text-white */
+  font-weight: 600; /* font-semibold */
+  font-size: 0.875rem; /* text-sm */
+}

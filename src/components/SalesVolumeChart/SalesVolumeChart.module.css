@@ -1,0 +1,32 @@
+/* SalesVolumeChart.module.css */
+.container {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 32px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 320px;
+   /* Adjust width as needed */
+}
+
+.chartWrapper {
+  height: 400px; /* Adjust height as needed */
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #00BFFF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.button:hover {
+  background-color: #009ACD;
+}

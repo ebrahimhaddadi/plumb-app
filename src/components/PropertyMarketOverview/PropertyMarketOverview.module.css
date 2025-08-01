@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  color: white;
+  padding: 2rem 0; /* فاصله بالا و پایین */
+  text-align: center;
+  margin-right: 32px;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.tabsRow {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px; /* عرض حداکثر برای شبیه‌سازی تصویر */
+  margin-bottom: 0.5rem;
+}
+
+.tab {
+  flex: 1; /* تقسیم برابر فضا */
+  padding: 0.75rem 1rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #fff; /* سفید پیش‌فرض */
+  color: #000;
+  transition: background-color 0.2s ease;
+  font-family: "Vazirmatn";
+}
+
+.tab.active {
+  background-color: #3b82f6; /* آبی برای فعال */
+  color: white;
+}
+
+.tab:hover {
+  opacity: 0.9;
+}

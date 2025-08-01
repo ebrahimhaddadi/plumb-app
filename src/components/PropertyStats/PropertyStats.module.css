@@ -1,0 +1,66 @@
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 330px; /* عرض محدود شبیه تصویر */
+  background: conic-gradient(from 90deg at 50% 50%, #ff00ff, #00ffff, #00ff00, #ffff00, #ff0000, #ff00ff); /* gradient رنگارنگ شبیه rainbow در تصویر */
+  border-radius: 20px; /* گوشه‌های گرد خارجی */
+  padding: 4px; /* عرض border (فاصله برای gradient) */
+  margin: 0 auto; /* وسط‌چین */
+  margin-right: 36px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-width: 4px;
+
+}
+
+.innerContainer {
+  background: linear-gradient(135deg, #000, #333); /* گرادیان تاریک داخلی */
+  border-radius: 16px; /* کمی کمتر از خارجی برای نمایش border */
+  padding: 1rem;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* جداکننده ملایم */
+}
+
+.stat:last-of-type {
+  border-bottom: none; /* آخرین بدون مرز پایین */
+}
+
+.number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.label {
+  font-size: 1.4rem;
+  color: #ccc;
+  margin: 0.25rem 0;
+  font-family: "Vazirmatn";
+}
+
+.change {
+  font-size: 1rem;
+  color: #00ff00; /* سبز برای افزایش */
+  font-weight: bold;
+}
+
+.footer {
+  font-size: 0.875rem;
+  color: #999;
+  margin-top: 1rem;
+  text-align: center;
+}

@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* فاصله بین آیتم‌ها */
+  width: 100%;
+  max-width: 320px; /* عرض محدود شبیه تصویر موبایل */
+  padding: 1rem;
+  border-radius: 8px; /* گوشه‌های گرد کلی */
+  margin: 0 auto; /* وسط‌چین اگر نیاز باشد */
+  margin-right: 32px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  background-color: #1f2937; /* خاکستری تیره برای هر آیتم */
+  border-radius: 5px; /* گرد کامل */
+  padding: 0.75rem 1rem; /* فاصله داخلی */
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: 1px solid #c6cdda; /* خاکستری خردگی برای آیتم‌ها */ 
+  height: 95px;
+
+
+}
+
+.item:hover {
+  background-color: #374151; /* hover تیره‌تر */
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* دایره */
+  margin-right: 1rem; /* فاصله از متن */
+}
+
+.icon {
+  font-size: 1.5rem; /* اندازه آیکون */
+}
+
+.text {
+  flex: 1; /* پر کردن فضای باقی‌مانده */
+}

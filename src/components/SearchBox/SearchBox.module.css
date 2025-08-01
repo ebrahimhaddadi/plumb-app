@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 90%; /* عرض کامل، تنظیم کنید */
+  max-width: 400px; /* عرض حداکثر برای شبیه‌سازی تصویر */
+  background-color: #f0f0f0; /* بکگراند روشن */
+  border-radius: 4px; /* گوشه‌های گرد */
+  overflow: hidden; /* برای جلوگیری از بیرون زدن */
+  margin-right: 32px;
+  height: 69px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.input {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666; /* رنگ placeholder */
+  outline: none;
+  text-align: right;
+}
+
+.input::placeholder {
+  color: #999; /* رنگ placeholder */
+}
+
+.searchButton {
+  background-color: #3b82f6; /* آبی شبیه به تصویر */
+  color: white;
+  border: none;
+  /* padding: 10px 15px; */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 69px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+}
+
+.icon {
+  font-size: 18px; /* اندازه آیکون */
+}

@@ -1,23 +1,28 @@
+/* صفحه اصلی */
 .container {
-
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* فاصله بین بخش‌ها */
     align-items: center;
     justify-content: center;
-
 }
 
 .latestSection {
-    /* بخش اصلی فضای اضافی رو بگیره */
+    width: 100%;
 }
 
+/* اسکرول کارت‌ها */
 .cardsWrapper {
-    width: 100vw;
+    width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 5rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 .cardsWrapper::-webkit-scrollbar {
@@ -28,13 +33,12 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    padding: 0 1rem;
     width: max-content;
 }
 
 .card {
-    min-width: 250px; /* عرض ثابت برای کارت‌ها */
-    max-width: 250px; /* جلوگیری از کشیدگی بیش از حد */
+    min-width: 250px;
+    max-width: 250px;
     background: white;
     border-radius: 12px;
     padding: 0.75rem;
@@ -44,7 +48,7 @@
 
 .cardImage {
     width: 100%;
-    height: 150px; /* ارتفاع ثابت برای تصاویر */
+    height: 150px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -52,9 +56,9 @@
 .cardTitle {
     font-size: 16px;
     margin: 0.5rem 0;
-    white-space: nowrap; /* جلوگیری از شکستن متن */
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* نمایش ... اگر متن بلند باشه */
+    text-overflow: ellipsis;
 }
 
 .cardDescription {
@@ -66,32 +70,26 @@
     text-overflow: ellipsis;
 }
 
-
-
-
-/* اطمینان از اینکه دکمه‌ها زیر کارت‌ها باشن */
+/* دکمه‌ها زیر کارت‌ها */
 .buttonsContainer {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    /*margin-top: 20px;*/
-    /*margin-bottom: 150px;*/
     align-items: center;
-    width: 95vw;
-    /*position: fixed;*/
+
+    
 }
 
-.topContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 95vw;
-    height: 55px;
+/* نوار بالا */
+.topContainer {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    
+
 }
-.ballContainer{
+
+.ballContainer {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #fff;
@@ -100,34 +98,38 @@
     border-radius: 50%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
-.imageContainer{
+
+.imageContainer {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-.customerText{
+
+.customerText {
     color: #000;
     margin-right: 15px;
 }
+
 .buttonsWrapper {
-    width: 95vw;
+    width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    margin: 0 -1rem;
+    padding: 0 1rem;
     display: flex;
     flex-direction: row-reverse;
     -webkit-overflow-scrolling: touch;
     height: 55px;
     align-items: center;
-
+    box-sizing: border-box;
 }
+
 .tabsWrapper {
     display: flex;
     gap: 0.5rem;
     overflow-x: auto;
-    padding: 0.5rem 0;
-    width: 100vw;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .tab {
@@ -135,8 +137,7 @@
     height: 37px;
     width: 116px;
     align-items: center;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin: 0 5px;
     padding: 0.5rem 1rem;
     font-size: 14px;
     border-radius: 999px;
@@ -149,7 +150,6 @@
 }
 
 .tab:hover {
-
     border: none;
 }
 
@@ -162,14 +162,18 @@
     color: white;
     border: none;
 }
-.containerNew{
+
+.containerNew {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 95vw;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
     color: #1a1a1a;
 }
+
 .showAll {
     background-color: transparent;
     border: 1px solid #f85a2a;
@@ -182,40 +186,44 @@
 }
 
 .showAll:hover {
-    background-color: #f85a2a11; /* کمی نارنجی خیلی روشن هنگام hover */
+    background-color: #f85a2a11;
 }
 
 .requestBtn {
-    background: linear-gradient(to left, #00c471, #a2f5c1);
-    color: white;
+    background-color: #d1f8f5;
+    color: #2b3e50;
     padding: 12px 24px;
     border: none;
-    border-radius: 999px; /* گرد کامل */
-    font-size: 14px;
+    border-radius: 999px;
+    font-size: 20px;
     font-family: 'Vazirmatn', sans-serif;
     font-weight: 500;
     cursor: pointer;
     text-align: center;
     transition: transform 0.2s ease;
-    width: 100%;
+    width: 320px;
+    height: 50px;
     max-width: 400px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }
 
-.requestBtn:hover {
-    transform: scale(1.02);
-    border: none;
-}
+.requestBtn:hover,
 .requestBtn:focus {
     transform: scale(1.02);
     border: none;
     outline: none;
 }
+
 .registerBtn {
     background: white;
     color: #f85a2a;
     border: 1px solid #f85a2a;
     padding: 10px 24px;
-    border-radius: 999px; /* گرد کامل */
+    border-radius: 999px;
     font-size: 14px;
     font-family: 'Vazirmatn', sans-serif;
     font-weight: 500;
@@ -230,6 +238,8 @@
     border: 1px solid #f85a2a;
     outline: none;
 }
+
+/* مودال */
 .modalOverlay {
     position: fixed;
     top: 0;
@@ -249,7 +259,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 75%;
+    width: 90%;
     max-width: 320px;
     color: #1a1a1a;
 }
@@ -278,4 +288,3 @@
     color: #f85a2a;
     cursor: pointer;
 }
-

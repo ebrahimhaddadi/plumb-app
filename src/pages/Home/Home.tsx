@@ -10,6 +10,17 @@ import Building4Svg from "../../assets/icons/building-4.svg";
 import BuildingsSvg from "../../assets/icons/buildings.svg";
 import Card from "../../components/card/Card.tsx";
 import {useNavigate} from "react-router-dom";
+import Typewriter from "../../components/common/Typewriter/Typewriter.tsx";
+import UserCountContainer from "../../components/UserCountContainer/UserCountContainer.tsx";
+import LoopingBanner from "../../components/Banner/LoopingBanner/LoopingBanner.tsx";
+import SearchBoxMain from "../../components/SearchBox/SearchBox.tsx";
+import PropertyMarketOverview from "../../components/PropertyMarketOverview/PropertyMarketOverview.tsx";
+import PropertyStats from "../../components/PropertyStats/PropertyStats.tsx";
+import MenuList from "../../components/MenuList/MenuList.tsx";
+import SliderComponent from "../../components/SliderComponent/SliderComponent.tsx";
+import SalesVolumeChart from "../../components/SalesVolumeChart/SalesVolumeChart.tsx";
+import FAQComponent from "../../components/FAQComponent/FAQComponent.tsx";
+import DownloadBadges from "../../components/DownloadBadges/DownloadBadges.tsx";
 
 
 
@@ -85,16 +96,21 @@ export default function Home() {
     return (
         <div className={styles.container}>
             <div className={styles.topContainer} >
-                <div className={styles.ballContainer} >
+                {/* <div className={styles.ballContainer} >
                     <img src={BallSvg} />
-                </div>
-                <div className={styles.imageContainer}>
+                </div> */}
+                {/* <div className={styles.imageContainer}>
                     <h4 className={styles.customerText}  >مشتری 1</h4>
                     <img src={ProfileImage}/>
-                </div>
+                </div> */}
+
             </div>
-            <SearchBox/>
-             <div className={styles.buttonsWrapper} >
+            <div className={styles.topContainer} >
+                <Typewriter delay={320} text="اولین سامانه هوشمند ارزیابی کیفی ساختمان های در حال ساخت و ساخته شده در ایران" />
+            </div>
+
+            {/* <SearchBox/> */}
+             {/* <div className={styles.buttonsWrapper} >
 
                      {categories.map((cat) => (
                          <button
@@ -108,19 +124,31 @@ export default function Home() {
                          </button>
                      ))}
 
-             </div>
+             </div> */}
             <div className={styles.buttonsContainer}>
                 <button className={styles.requestBtn}
                         onClick={() => setShowModal(true)}
-                >درخواست بازرسی</button>
+                >درخواست ارزیابی</button>
             </div>
-            <div className={styles.containerNew} >
+            {/* <div className={styles.containerNew} >
                 <button className={styles.showAll}>
                     دیدن همه
                 </button>
                 <h4  >جدیدترین ها</h4>
-            </div>
-            <div className={styles.latestSection}>
+            </div> */}
+            <UserCountContainer/>
+
+            <LoopingBanner/>
+             <SearchBoxMain/>
+             <PropertyMarketOverview/>
+             <PropertyStats/>
+             <MenuList/>
+             <SliderComponent/>
+             <SalesVolumeChart/>
+             <FAQComponent/>
+             <DownloadBadges/>
+
+            {/* <div className={styles.latestSection}>
 
                 <div className={styles.cardsWrapper}>
                     <div className={styles.cards}>
@@ -131,7 +159,7 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-            </div>
+            </div> */}
             {showModal && (
                 <div className={styles.modalOverlay}>
                     <div className={styles.modalContent}>

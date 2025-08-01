@@ -1,20 +1,24 @@
-/* کل بک‌گراند قرمز و محتوای وسط */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .fullWrapper {
-    background-color: red;
-    width: 100vw;
     min-height: 100vh;
+    background-color: #2b3e50; /* یا هر رنگی خواستی */
     display: flex;
-    justify-content: center;
-    background-color: #f8faff;
+    flex-direction: column;
 }
 
-/* محتوا با عرض محدود (وسط چین) */
+/* محتوای وسط چین با عرض محدود */
 .centerContent {
     width: 100%;
     max-width: 430px;
-    min-height: 100vh;
-    background-color: transparent; /* اگه خواستی جدا بکگراند بدی */
-    display: flex;
-    flex-direction: column;
-    padding: 1rem; /* حاشیه داخلی */
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .centerContent {
+        max-width: 768px;
+        padding: 2rem;
+    }
 }
