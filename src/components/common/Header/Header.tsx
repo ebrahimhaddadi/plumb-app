@@ -9,7 +9,7 @@ interface HeaderProps {
 }
 
 const Header = ({ toggleDrawer }: HeaderProps) => {
-    const {t}=useTrans
+    const {t}=useTranslation()
     return (
         <div className={styles.header}>
             <button onClick={toggleDrawer} className={styles.menuBtn}>
@@ -19,7 +19,10 @@ const Header = ({ toggleDrawer }: HeaderProps) => {
             {/* <div className={styles.ballContainer} >
                     <img src={BallSvg} />
              </div> */}
-                <div className={styles.logoText} >{t("shaghoul")}</div>
+                <div className={styles.logoText} >
+                    {/* {t("shaghoul")} */}
+                    شاقول
+                    </div>
               {/* <LanguageSelector/> */}
             </div>
           
